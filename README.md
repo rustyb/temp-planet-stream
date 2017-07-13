@@ -1,3 +1,11 @@
+# to replicate
+
+```
+docker-compose build
+docker-compose run -d app
+docker logs -f temp-planet-stream_app_run_1
+```
+
 # planet-stream
 
 OSM Planet Stream creates a readable `stream` that combines the metadata from [planet.osm.org](http://planet.osm.org) with the [Augmented Diff API](https://wiki.openstreetmap.org/wiki/Overpass_API/Augmented_Diffs).

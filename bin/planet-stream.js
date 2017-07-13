@@ -29,16 +29,13 @@ function getHashtags (str) {
 // Filter out records that have no metadata
 planetstream.map(JSON.parse)
 .filter(function (data) {
-  if (argv['hashtags']) {
-    if (data.metadata && data.metadata.comment) {
-      return getHashtags(data.metadata.comment).length > 0;
-    }
-  } else {
+    // will always log DATA: {"isFulfilled":false,"isRejected":false} 
+    console.log(`DATA: ${JSON.stringify(data)}`)
     return data.hasOwnProperty('metadata');
-  }
 })
 // print out record
 .onValue(function (obj) {
+
   var payload = JSON.stringify(obj);
   console.log(payload);
 });

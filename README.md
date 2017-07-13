@@ -1,4 +1,5 @@
 # to replicate
+Extract from the logs -> https://gist.github.com/rustyb/f65dbcfe205d4890c16f307eb368b255
 
 ```
 docker-compose build
